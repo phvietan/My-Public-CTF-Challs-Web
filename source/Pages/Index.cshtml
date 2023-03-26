@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+  ViewData["Title"] = "Home page";
+}
+
+<body>
+  <div id="header">
+    <div>
+      <i id="kirby" class="nes-kirby">a</i>
+      <p class="nes-balloon from-left nes-pointer">
+        My public CTF challenges by DrStrnegth<br>
+        Source is at: <a href="https://github.com/phvietan/My-Public-CTF-Challs/">here</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="challenges">
+    @if (IndexModel.listChallenges.challenges != null)
+    {
+      foreach (var chal in IndexModel.listChallenges.challenges)
+      {
+          <div onclick="openModal(`@chal.name`, `@chal.description`)">
+            <img src="@chal.icon">
+          <div class="difficulty-challenge">
+
+            @for (int i = 0; i < @chal.difficulty; ++i)
+            {
+                        <i class="nes-icon star"></i>
+            }
+          </div>
+            <p style="margin-top: 10px">@chal.name</p>
+          </div>
+      }
+    }
+  </div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div id="modalBody" class="modal-content">
+    </div>
+  </div>
+</body>
+
+</html>
