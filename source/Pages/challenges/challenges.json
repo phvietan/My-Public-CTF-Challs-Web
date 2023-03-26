@@ -2,7 +2,7 @@
     {
         "id": 0,
         "name": "Another secure store note",
-        "description": "From LINE CTF 2023, just a secured store note. Hint: client-side attacks only",
+        "description": "From LINE CTF 2023, just a secured store note. Solved by 7/477 teams.<br><br>Link to challenge: <a target=_blank rel='noopener noreferrer' href=https://assn.anctf.tk>https://assn.anctf.tk</a>",
         "difficulty": 5,
         "icon": "/images/mimikyu.webp"
     },
